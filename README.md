@@ -1,6 +1,8 @@
-# DaveLikesPizzaToo
+# Dave Likes Pizza Too!
 
-You know what else Dave likes besides pizza? Pizza, of course!
+> You know what I like even more than pizza? Pizza, of course!
+
+> -- Dave
 
 Author: William Gaul
 
@@ -20,4 +22,4 @@ Running the game locally requires a server environment. [http-server](https://gi
 
 - Uses some awesome music ("Wah Game Loop" and "Funk Game Loop") by [Kevin MacLeod](http://incompetech.com/)
 - Various sound effects from [freesound.org](http://www.freesound.org/)
-- Powered by [Phaser](https://github.com/photonstorm/phaser)
+- Powered by [Phaser](https://github.com/photonstorm/phaser) and [Parse](https://parse.com/)

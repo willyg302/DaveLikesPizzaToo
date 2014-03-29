@@ -92,7 +92,7 @@ Dave.Game.prototype = {
 var game = new Phaser.Game(640, 480, Phaser.AUTO, 'game-stage');
 
 // Add our various states to the game
-game.state.add('boot', Dave.Boot, true); // Start this one automatically
+game.state.add('boot', Dave.Boot, true);  // Start our boot state automatically
 game.state.add('preloader', Dave.Preloader);
 game.state.add('mainMenu', Dave.MainMenu);
 game.state.add('game', Dave.Game);
