@@ -1,16 +1,19 @@
 Phaser = require 'Phaser'
 
+utils = require './utils.coffee'
+
 class Menu extends Phaser.State
 	constructor: -> super
 
 	create: ->
-		@add.audio('menuMusic').play('', 0, 1, true)
+		utils.music this, 'menuMusic'
+		new utils.Gradient('#72B9FF', '#B2FEFF').mount(@)
 
-		background = @add.tileSprite 0, 0, @game.width, @game.height, 'bg'
-		background.scale.set 1.5, 4.0/3
+		# Overlay concrete
+		@add.sprite 0, 0, 'concrete'
 
 		logo = @add.sprite 150, 80, 'logo'
-		logo.scale.set 1.5, 4.0/3
+		#logo.scale.set 1.5, 4.0/3
 		@add.tween logo
 			.to {y: 100}
 			.to {y: 80}

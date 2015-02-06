@@ -1,0 +1,66 @@
+{
+	"preload": [
+		{
+			"type": "image",
+			"key": "preloadBar",
+			"url": "assets/img/preload-bar.png"
+		}
+	],
+	"main": [
+		{
+			"type": "image",
+			"key": "concrete",
+			"url": "assets/img/concrete.png"
+		},
+		{
+			"type": "image",
+			"key": "logo",
+			"url": "assets/img/dave-logo.png"
+		},
+		{
+			"type": "image",
+			"key": "parseLogo",
+			"url": "assets/img/parse-logo.png"
+		},
+		{
+			"type": "image",
+			"key": "phaserLogo",
+			"url": "assets/img/phaser-logo.png"
+		},
+		{
+			"type": "audio",
+			"key": "gameMusic",
+			"urls": ["assets/snd/funk_game_loop.mp3", "assets/snd/funk_game_loop.ogg"]
+		},
+		{
+			"type": "audio",
+			"key": "menuMusic",
+			"urls": ["assets/snd/wah_game_loop.mp3", "assets/snd/wah_game_loop.ogg"]
+		},
+		{
+			"type": "audio",
+			"key": "burp",
+			"urls": ["assets/snd/burp.mp3", "assets/snd/burp.ogg"]
+		},
+		{
+			"type": "audio",
+			"key": "chomp",
+			"urls": ["assets/snd/chomp.mp3", "assets/snd/chomp.ogg"]
+		},
+		{
+			"type": "audio",
+			"key": "powerdown",
+			"urls": ["assets/snd/powerdown.mp3", "assets/snd/powerdown.ogg"]
+		},
+		{
+			"type": "audio",
+			"key": "powerup",
+			"urls": ["assets/snd/powerup.mp3", "assets/snd/powerup.ogg"]
+		},
+		{
+			"type": "audio",
+			"key": "splat",
+			"urls": ["assets/snd/splat.mp3", "assets/snd/splat.ogg"]
+		}
+	]
+}
