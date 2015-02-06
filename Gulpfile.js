@@ -1,4 +1,5 @@
 var gulp       = require('gulp');
+var coffeelint = require('gulp-coffeelint');
 var less       = require('gulp-less');
 var minifycss  = require('gulp-minify-css');
 var uglify     = require('gulp-uglify');
@@ -18,8 +19,22 @@ var paths = {
 	app: './app',
 	dist: './dist',
 	css: './app/less/main.less',
-	js: './app/js/app.coffee'
+	js: './app/js/app.coffee',
+	lint: './app/js/*.coffee'
 };
+
+
+// Tests
+
+gulp.task('lint', function() {
+	return gulp.src(paths.lint)
+		.pipe(coffeelint())
+		.pipe(coffeelint.reporter())
+		.pipe(coffeelint.reporter('failOnWarning'));
+});
+
+
+// Build
 
 gulp.task('clean', function(cb) {
 	del(paths.dist, cb);

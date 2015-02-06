@@ -4,7 +4,7 @@ def build():
 	ok.run(test).node('gulp', module=True)
 
 def test():
-	pass
+	ok.node('gulp lint', module=True)
 
 def install():
 	ok.npm('install')
