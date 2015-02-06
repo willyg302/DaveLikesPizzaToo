@@ -28,6 +28,7 @@
     ]
   },
   "browserify-shim": {
+    "Parse": "global:Parse",
     "Phaser": "global:Phaser"
   }
 }
