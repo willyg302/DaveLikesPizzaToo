@@ -9,10 +9,14 @@ class Preload extends Phaser.State
 
 	preload: ->
 		# Show loading screen
-		new utils.Gradient('#72B9FF', '#B2FEFF').mount(@)
-		new utils.Text('Loading...').size(40).at(@game.world.centerX, @game.world.centerY).align('center').mount(@)
-		@preloadBar = @add.sprite @game.world.centerX - 128, @game.world.centerY + 32, 'preloadBar'
-		@load.setPreloadSprite @preloadBar
+		new utils.Gradient '#72B9FF', '#B2FEFF'
+			.mount @
+		new utils.Text 'Loading...'
+			.size 64
+			.at @game.world.centerX, @game.world.centerY - 48
+			.align 'center'
+			.mount @
+		@load.setPreloadSprite @add.sprite @game.world.centerX - 160, @game.world.centerY, 'preloadBar'
 
 		# Initialize Parse
 		Parse.initialize 'rGCUdAT8KpF4ZdJCR2QgVReggxqKIHmGyjEnSlsX', 'BvbgWQKlKDflqNtebL4WNA9PxSsRUksOyTxstTVP'
