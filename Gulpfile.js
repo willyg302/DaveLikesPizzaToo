@@ -1,7 +1,6 @@
 var gulp       = require('gulp');
 var coffeelint = require('gulp-coffeelint');
-var less       = require('gulp-less');
-var minifycss  = require('gulp-minify-css');
+var stylus     = require('gulp-stylus');
 var uglify     = require('gulp-uglify');
 
 var browserify = require('browserify');
@@ -18,7 +17,7 @@ var paths = {
 	],
 	app: './app',
 	dist: './dist',
-	css: './app/less/main.less',
+	css: './app/less/main.styl',
 	js: './app/js/app.coffee',
 	lint: './app/js/*.coffee'
 };
@@ -47,8 +46,9 @@ gulp.task('copy-assets', function() {
 
 gulp.task('compile-css', function() {
 	return gulp.src(paths.css)
-		.pipe(less())
-		.pipe(minifycss())
+		.pipe(stylus({
+			compress: true
+		}))
 		.pipe(gulp.dest(paths.dist));
 });
 
