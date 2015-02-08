@@ -6,7 +6,7 @@ class Menu extends Phaser.State
   constructor: -> super
 
   create: ->
-    utils.music this, 'menuMusic'
+    #utils.music this, 'menuMusic'
     new utils.Gradient '#72B9FF', '#B2FEFF'
       .mount @
 

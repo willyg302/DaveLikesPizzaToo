@@ -20,6 +20,10 @@ class Preload extends Phaser.State
 
     # Initialize Parse
     Parse.initialize 'rGCUdAT8KpF4ZdJCR2QgVReggxqKIHmGyjEnSlsX', 'BvbgWQKlKDflqNtebL4WNA9PxSsRUksOyTxstTVP'
+    Parse.Analytics.track 'load', {
+      language: window.navigator.language,
+      platform: window.navigator.platform
+    }
 
     # Set up game defaults
     @stage.backgroundColor = 'black'
