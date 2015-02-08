@@ -17,7 +17,7 @@ var paths = {
 	],
 	app: './app',
 	dist: './dist',
-	css: './app/less/main.styl',
+	css: './app/css/main.styl',
 	js: './app/js/app.coffee',
 	lint: './app/js/*.coffee'
 };
