@@ -8,6 +8,9 @@ def bake():
 def build():
 	ok.run(test).node('gulp', module=True)
 
+def publish():
+	ok.node('gulp deploy', module=True)
+
 def test():
 	ok.node('gulp lint', module=True)
 

@@ -1,5 +1,6 @@
 var gulp       = require('gulp');
 var coffeelint = require('gulp-coffeelint');
+var deploy     = require('gulp-gh-pages');
 var stylus     = require('gulp-stylus');
 var uglify     = require('gulp-uglify');
 
@@ -19,7 +20,8 @@ var paths = {
 	dist: './dist',
 	css: './app/css/main.styl',
 	js: './app/js/app.coffee',
-	lint: './app/js/*.coffee'
+	lint: './app/js/*.coffee',
+	deploy: './dist/**/*'
 };
 
 
@@ -30,6 +32,14 @@ gulp.task('lint', function() {
 		.pipe(coffeelint())
 		.pipe(coffeelint.reporter())
 		.pipe(coffeelint.reporter('failOnWarning'));
+});
+
+
+// Deploy
+
+gulp.task('deploy', function() {
+	return gulp.src(paths.deploy)
+		.pipe(deploy());
 });
 
 
